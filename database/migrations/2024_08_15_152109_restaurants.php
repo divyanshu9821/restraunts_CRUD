@@ -15,7 +15,8 @@ return new class extends Migration
         Schema::create('restaurants',function(Blueprint $table){
             $table->id();
             $table->integer('master_restaurant_brand_id');
-            $table->integer('master_location_id');
+            $table->string('address');
+            $table->integer('master_city_state_id');
             $table->float('rating');
             $table->integer('deal_amount');
             $table->string('deal_options');
