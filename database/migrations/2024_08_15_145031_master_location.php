@@ -16,6 +16,8 @@ return new class extends Migration
             $table->id();
             $table->string('city');
             $table->string('state');
+            $table->unique(['city', 'state']);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

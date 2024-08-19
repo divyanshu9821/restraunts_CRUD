@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('deal_amount');
             $table->string('deal_options');
             $table->integer('bought_count');
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 
@@ -30,5 +32,6 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('restaurants');
     }
 };

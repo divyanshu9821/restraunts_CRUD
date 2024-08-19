@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Restaurants extends Model
+class Model_restaurants extends Model
 {
     use HasFactory;
+    use SoftDeletes;
 
     protected $table = 'restaurants';
 
@@ -18,6 +20,6 @@ class Restaurants extends Model
         'rating',
         'deal_amount',
         'deal_options',
-        'bought_count',
+        'bought_count'
     ];
 }
